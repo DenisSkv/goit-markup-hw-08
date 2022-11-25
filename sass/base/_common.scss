@@ -10,6 +10,8 @@
     list-style: none;
 }
 
+
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -18,9 +20,16 @@ body {
     color: var(--primary-color);
 }
 
+.is-overflow {
+    overflow: hidden;
+}
 
+section {
+    padding-bottom: 60px;
+    padding-top: 60px;
 
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include desktop {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
 }

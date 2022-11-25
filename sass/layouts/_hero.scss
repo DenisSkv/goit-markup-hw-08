@@ -1,27 +1,64 @@
-.hero__section {
+.hero {
     background-color: var(--primary-background-color);
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1600px;
-    height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
+    @include max-mobile {
+        background-image: var(--gradient),
+            url(../img/mobile/hero-mob.jpg);
+
+        @include ratio2x {
+            background-image: var(--gradient),
+                url(../img/mobile/hero-mob-2x.jpg);
+        }
+    }
+
+    @include tablet {
+        @include ratio2x {
+            background-image: var(--gradient),
+                url(../img/tab/hero-tab-2x.jpg);
+        }
+
+        background-image: var(--gradient),
+        url(../img/tab/hero-tab.jpg);
+    }
+
+    @include desktop {
+        @include ratio2x {
+            background-image: var(--gradient),
+                url(../img/hero-bg-2x.jpg);
+        }
+
+        background-image: var(--gradient),
         url(../img/hero-bg.jpg);
+    }
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1600px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 118px 0;
+    text-align: center;
+
+    @include desktop {
+        height: 600px;
+        padding: 200px 0;
+    }
 }
 
 .hero__title {
-    margin-bottom: 30px;
-
+    margin: 0 auto 30px auto;
+    max-width: 360px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--white-color);
+    font-size: 26px;
+    line-height: 1.61;
+    
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 696px;
+    }
 }

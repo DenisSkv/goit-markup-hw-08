@@ -9,13 +9,19 @@ h6 {
 }
 
 ul,
-ol {
+li {
     margin: 0;
-    padding-left: 0;
+    padding: 0;
+    list-style: none;
 }
 
 button {
     cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 address {
@@ -26,6 +32,5 @@ address {
 
 img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }

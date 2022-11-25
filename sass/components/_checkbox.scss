@@ -32,6 +32,24 @@
     opacity: 1;
 }
 
+.check-span {
+    font-size: 12px;
+    line-height: 1.16;
+    color: var(--primary-color);
+
+    @include mobile {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.71;
+        align-items: center;
+    }
+}
+
 .link-agreement {
+    padding-left: 2px;
     color: var(--accent-color);
 }

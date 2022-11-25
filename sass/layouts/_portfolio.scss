@@ -1,18 +1,41 @@
 .portfolio-nav {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
     gap: 8px;
+
+    @include max-mobile {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        row-gap: 15px;
+    }
+
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
 
 .portfolio-item {
-    width: 370px;
     background-color: var(--white-color);
+    width: 100vw;
+    
+    @include tablet {
+        max-width: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+        max-width: calc((100% - 60px) / 3);
+    }
 }
 
 .portfolio-top-wrap {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .portfolio-top-text {
