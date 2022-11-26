@@ -56,11 +56,9 @@
 
 .menu__soc {
     display: flex;
-
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 390px) {
         flex-wrap: wrap;
     }
-
     margin-top: 64px;
 }
 
@@ -80,7 +78,6 @@
 
 .menu__btn {
     background: transparent;
-
     @include tablet {
         display: none;
     }
