@@ -51,6 +51,10 @@
         }
 }
 
+.modal-close-icon {
+    height: 18px;
+}
+
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scaleY(0);
 }
